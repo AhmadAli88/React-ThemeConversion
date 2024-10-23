@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import $ from "jquery";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "owl.carousel";
 
 const MainBanner = () => {
+  useEffect(() => {
+    // Ensure that Owl Carousel is initialized only after component is mounted
+    const initializeOwlCarousel = () => {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: true,
+      });
+    };
+
+    // Check if jQuery is loaded and if Owl Carousel is defined
+    if (typeof $ !== "undefined" && $.fn.owlCarousel) {
+      initializeOwlCarousel();
+    } else {
+      console.error("Owl Carousel is not initialized properly");
+    }
+  }, []); // Run once when the component mounts
+
   return (
     <div className="main-banner">
       <div className="owl-carousel owl-banner">

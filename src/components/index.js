@@ -1,6 +1,6 @@
 import SubHeader from "./SubHeader";
 import Header from "./Header";
-import Banner from "./MainBanner";
+import Banner from "./MainBanner.jsx";
 import Featured from "./FeaturedSection";
 import VideoSection from "./VideoSection";
 import VideoContent from "./VideoContent";

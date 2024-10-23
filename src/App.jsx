@@ -8,9 +8,16 @@ function App() {
   return (
     <>
       <div>
+        <Index.SubHeader />
         <Index.Header />
         <Index.Banner />
         <Index.Featured />
+        <Index.VideoSection />
+        <Index.VideoContent />
+        <Index.FunFacts />
+        <Index.BestDeals />
+        <Index.PropertiesSection />
+        <Index.ContactSection />
         <Index.Footer />
       </div>
     </>
